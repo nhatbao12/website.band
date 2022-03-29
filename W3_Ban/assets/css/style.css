@@ -6,7 +6,7 @@
 hmtl{
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* common */
 .clear{
     clear: both;
 }
@@ -15,6 +15,18 @@ hmtl{
     color: #fff !important;
 }
 
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* main */
 #main{
 
 }
@@ -286,6 +298,10 @@ display: block;
 
 }
 
+.modal.open {
+    display: flex;
+}
+
 .modal{
     position: fixed;
     top: 0;
@@ -293,7 +309,7 @@ display: block;
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0, 0.4);
-    display: flex;
+    display: none;  
     align-items: center;
     justify-content: center;
 }
@@ -331,8 +347,64 @@ display: block;
     width: 900px;
     min-height: 200px;
     position: relative;
+    max-width: calc(100% - 32px);
+    animation: modalFadeIn ease .5s;
 }
 
 .modal-heading-icon{
     margin-right: 16px;
+}
+
+.modal-lable{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+    
+}
+
+.modal-input{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px; 
+}
+
+button#Buy-Tickets{
+    border: none;
+    width: 100%;
+    color: #fff;
+    background-color: #009688;
+    padding: 16px;
+    margin: 16px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button#Buy-Tickets:hover{
+    color: #000;
+    background-color: #ccc;
+    font-size: 15px;
+}
+
+.modal-footer{
+    padding: 16px;
+    text-align: right;
+   
+}
+
+.modal-footer a{
+    color: #2196f3;
+}
+
+@keyframes modalFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
