@@ -15,9 +15,49 @@ hmtl{
     color: #fff !important;
 }
 
+.text-center{
+    text-align: center !important;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.btn{
+    margin-top: 15px;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    border: none;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+    
+    
+}
+
 .row{
     margin-left: -8px;
     margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .col{
@@ -25,6 +65,19 @@ hmtl{
     padding-left: 8px;
     padding-right: 8px;
 }
+
+.col-full{
+    width: 100%;
+}
+
+.col-haft{
+    width: 50%;
+}
+
+.col-third{
+    width: 33.33333%;
+}
+
 
 /* main */
 #main{
@@ -184,11 +237,7 @@ display: block;
     
 }
 
-#content .members-item{
-    float: left;
-    width: 33.33333%;
-    text-align: center;
-}
+
 
 #content .members-name{
     
@@ -241,15 +290,12 @@ display: block;
 
 /* places */
 .places-list{
-   margin: 32px -8px 48px;
+   margin-top: 32px;
+   margin-bottom: 48px;
    
 }
 
-.places-item{
-    float: left;
-    width: 33.33333%;
-    padding: 0 8px;
-}
+
 
 .places-img{
     width: 100%;
@@ -280,19 +326,34 @@ display: block;
     line-height: 1.4;
 }
 
-.places-buy-btn{
-    margin-top: 15px;
-    color: #fff;
-    background-color: #000;
-    text-decoration: none;
-    padding: 11px 16px;
-    display: inline-block;
+
+/* contact from */
+.contact-content{
+    margin-top: 48px;
 }
 
-.places-buy-btn:hover{
-    color: #000;
-    background-color: #ccc;
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
 }
+
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline;
+
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    width: 100%;
+}
+
+
 
 #footer{
 

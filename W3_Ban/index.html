@@ -58,20 +58,20 @@
                     We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
                 </p>
-                <div class="members-list">
-                    <div class="members-item">
+                <div class="row members-list">
+                    <div class="col col-third text-center">
                         <p class="members-name">Name</p>
                         <img src="./assets/img/Band/member1.jpg" alt="Name" class="members-img">
                     </div>
-                    <div class="members-item">
+                    <div class="col col-third text-center">
                         <p class="members-name">Name</p>
                         <img src="./assets/img/Band/member1.jpg" alt="Name" class="members-img">
                     </div>
-                    <div class="members-item">
+                    <div class="col col-third text-center">
                         <p class="members-name">Name</p>
                         <img src="./assets/img/Band/member1.jpg" alt="Name" class="members-img">
                     </div>
-                        <div class="clear"></div>
+                       
                 </div>
             </div>
 
@@ -87,35 +87,35 @@
                         <li>November <span class="quantily">3</span></li>
                     </ul>
                     <!-- Places -->
-                    <div class="places-list">
-                        <div class="places-item">
+                    <div class=" row places-list">
+                        <div class="col col-third">
                             <img src="./assets/img/Places/Places1.jpg" alt="New York" class="places-img">
                             <div class="places-body">
                                 <h3 class="places-heading">New York</h3>
                                 <p class="places-time">Fri 27 Nov 2016</p>
                                 <p class="places-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button  class="places-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button  class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="places-item">
+                        <div class="col col-third">
                             <img src="./assets/img/Places/Places2.jpg" alt="Paris" class="places-img">
                             <div class="places-body">
                                 <h3 class="places-heading">Paris</h3>
                                 <p class="places-time">Sat 28 Nov 2016</p>
                                 <p class="places-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button  class="places-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button  class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="places-item">
+                        <div class="col col-third">
                             <img src="./assets/img/Places/Places3.jpg" alt="San Francisco" class="places-img">
                             <div class="places-body">
                                 <h3 class="places-heading">San Francisco</h3>
                                 <p class="places-time">Sun 29 Nov 2016</p>
                                 <p class="places-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button  class="places-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button  class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="clear"></div>
+                        
                     </div>
             </div>
                  
@@ -125,6 +125,32 @@
           <div class="content-section">
             <h2 class="section-heading">CONTACT</h2>
             <p class="section-sub-heading">Fan? Drop a note!</p>
+
+            <div class="row contact-content">
+                <div class="col col-haft contact-info ">
+                    <p><i class="ti-location-pin"> Chicago, US</i></p>
+                    <p><i class="ti-mobile"> Phone: +00 151515</i></p>
+                    <p><i class="ti-email"> Email: mail@mail.com</i></p>
+                </div>
+                <div class="col col-haft contact-form">
+                    <form action="">
+                        <row>
+                            <div class="col col-haft">
+                                <input type="text" name="" placeholder="Name" id="" required class="form-control">
+                            </div>
+                            <div class="col col-haft">
+                                <input type="email" name="" placeholder="Email" id="" required class="form-control">
+                            </div>
+                        </row>
+                        <row>
+                            <div class="col col-full mt-8">
+                                <input type="text" name="" placeholder="Message" id=""required class="form-control">
+                            </div>
+                        </row>
+                                <input class=" pull-right btn mt-16" type="submit" value="SEND">
+                    </form>
+                </div>
+            </div>
     </div>
 
         <div id="footer">
@@ -191,7 +217,7 @@
            modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
            })
-
+// zzzz
        </script>
 </body>
 </html>
