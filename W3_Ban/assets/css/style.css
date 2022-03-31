@@ -203,7 +203,7 @@ display: block;
 }
 
 #content .content-section{
-    padding: 64px 0;
+    padding: 64px 0 112px;
     width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -291,7 +291,7 @@ display: block;
 /* places */
 .places-list{
    margin-top: 32px;
-   margin-bottom: 48px;
+  
    
 }
 
@@ -354,9 +354,39 @@ display: block;
 }
 
 
+/* map-section */
+.map-section img{
+    width: 100%;
+}
 
 #footer{
+    padding: 64px 16px;
+    text-align: center;
+}
 
+#footer .social-list{
+    font-size: 24px;
+    
+}
+
+#footer .social-list a{
+    color: rgba(0, 0, 0 , 0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a:hover,
+#footer .social-list a:hover{
+    color: rgba(0, 0, 0 , 0.3);
+}
+
+#footer .copyright{
+    margin-top: 15px;
+    color: rgba(0, 0, 0 , 0.6);
+
+}
+
+#footer .copyright a{
+    color: rgba(0, 0, 0 , 0.6);
 }
 
 .modal.open {
