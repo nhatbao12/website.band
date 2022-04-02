@@ -3,8 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-hmtl{
+html{
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 /* common */
 .clear{
@@ -13,7 +14,7 @@ hmtl{
 
 .text-while{
     color: #fff !important;
-}
+}   
 
 .text-center{
     text-align: center !important;
