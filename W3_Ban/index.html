@@ -7,6 +7,7 @@
     <title>The Band</title>
     <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/Fonts/themify-icons/themify-icons.css">
     
 </head>
@@ -20,7 +21,7 @@
     <li><a href="#tour">Tour</a></li>
     <li><a href="#contact">Contact</a></li>
     <li>
-        <a href="">
+        <a href="#">
             More
             <i class=" nav-arrow-down ti-angle-down"></i>
         </a>
@@ -35,10 +36,12 @@
 </ul>
             <!--End: Nav-->
             <!--Begin: Search button-->
-<div class="search-btn">
-    <i class=" search-icon ti-search"></i>
-</div>
- 
+        <div class="search-btn">
+            <i class="search-icon ti-search"></i>
+        </div>
+        <div id="mobile-menu" class="mobile-menu-btn">
+            <i class="menu-icon ti-menu"></i>
+        </div>
             <!--End: Search button-->
 
         </div>
@@ -60,15 +63,15 @@
 
                 </p>
                 <div class="row members-list">
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="members-name">Name</p>
                         <img src="./assets/img/Band/member1.jpg" alt="Name" class="members-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="members-name">Name</p>
                         <img src="./assets/img/Band/member1.jpg" alt="Name" class="members-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="members-name">Name</p>
                         <img src="./assets/img/Band/member1.jpg" alt="Name" class="members-img">
                     </div>
@@ -89,7 +92,7 @@
                     </ul>
                     <!-- Places -->
                     <div class=" row places-list">
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16">
                             <img src="./assets/img/Places/Places1.jpg" alt="New York" class="places-img">
                             <div class="places-body">
                                 <h3 class="places-heading">New York</h3>
@@ -98,7 +101,7 @@
                                 <button  class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16">
                             <img src="./assets/img/Places/Places2.jpg" alt="Paris" class="places-img">
                             <div class="places-body">
                                 <h3 class="places-heading">Paris</h3>
@@ -107,7 +110,7 @@
                                 <button  class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16">
                             <img src="./assets/img/Places/Places3.jpg" alt="San Francisco" class="places-img">
                             <div class="places-body">
                                 <h3 class="places-heading">San Francisco</h3>
@@ -229,14 +232,46 @@
 
            modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
-           })
+           }) 
+       </script>
 
+       <script>
+           var header = document.getElementById ('header');
+           var mobileMenu = document.getElementById ('mobile-menu');
+           var headerHeight = header.clientHeight;
+
+        //    Open/close Mobile menu
+           mobileMenu.onclick = function(){
+               var isClosed = header.clientHeight === headerHeight;
+               if(isClosed){
+                   header.style.height = 'auto';
+               }else {
+                    header.style.height = null;
+               }
+           }
+
+        // auto close menu
+            var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+                for (var i = 0; i <menuItems.length; i++){
+                    var menuItem = menuItems[i];
+                    
+                    menuItem.onclick = function(event) {
+                    var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav'); 
+
+                    if(isParentMenu){
+                        event.preventDefault();
+                        
+                    }else {
+                        header.style.height = null;
+                    }
+                }
+            }
        </script>
 
 
  
 </body>
-<!--       _
+<!--       _    
        .__(.)< (MEOW)
         \___)   
  ~~~~~~~~~~~~~~~~~~-->

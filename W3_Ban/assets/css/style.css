@@ -93,6 +93,7 @@ html{
     left: 0;
     right: 0;
     z-index: 1;
+    f
 }
 
 #nav{
@@ -154,16 +155,32 @@ display: block;
     font-size: 14px;
 }
 
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
 #header .search-btn{
     cursor: pointer;
     float: right;
     padding: 0 21px;    
 }
 
+
 #header .search-btn:hover{
+    cursor: pointer;
     background-color: #f44336;
 }
 
+#header .mobile-menu-btn:hover{
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+#header .menu-icon,
 #header .search-icon{
     color:#fff;
     font-size: 20px;
@@ -206,8 +223,11 @@ display: block;
 #content .content-section{
     padding: 64px 0 112px;
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading{
@@ -291,7 +311,7 @@ display: block;
 
 /* places */
 .places-list{
-   margin-top: 32px;
+   margin-top: 16px;
   
    
 }
@@ -500,3 +520,5 @@ button#Buy-Tickets:hover{
         transform: translateY(0);
     }
 }
+
+
